@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
-import Account from "../Account/account"
+import Account from "../Account/Account"
 import SearchModal from "../SearchModal/SearchModal"
 
 
