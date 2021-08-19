@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start && next export",
+    "lint": "next lint",
+    "export": "next build && next export"
   },
   "dependencies": {
     "fontawesome": "^5.6.3",
