@@ -1,6 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
+import { useStateContext } from "../components/HBOProvider";
 
 export default function CreateUser() {
+  const globalState = useStateContext();
+
   return (
     <div>
       <div className="create-user">
@@ -13,13 +16,13 @@ export default function CreateUser() {
         
             <img
               className="create-user__user-img"
-              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=046c29138c1335ef8edee7daf521ba50"
+              src={globalState.defaultUserImg}
               alt=""
             />
 
             <div className="create-user__input-group">
               <label>Name</label>
-              <input type="text" className="create-user__inputText" />
+              <input type="text" value={globalState.user} onChange={globalState.createUserAction} className="create-user__inputText" />
               <div className="create-user__colors">
                 <div
                   className="create-user__color
