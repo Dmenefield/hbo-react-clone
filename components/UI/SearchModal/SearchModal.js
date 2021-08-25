@@ -13,7 +13,7 @@ const SearchModal = (props) => {
     return (
       <div className={`search-modal ${globalState.searchModalOpen ? 'search-modal--active' : ' '}`}>
           <div className="search-modal__input-group">
-          <input className="search-modal__input" type="text" placeholder="Search for a title" value=""/>
+          <input className="search-modal__input" type="text" placeholder="Search for a title"/>
           <div className="search-modal__close-btn" onClick={() => globalState.setSearchModalOpenAction(false)}>
               <i className="fas fa-times"/>
           </div>
