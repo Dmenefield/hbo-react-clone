@@ -9,7 +9,9 @@ import FeaturedMedia from '../components/UI/FeaturedMedia/FeaturedMedia';
 import ForYouList from '../components/UI/ForYouList/ForYouList'
 import JustAdded from '../components/UI/JustAdded/JustAdded';
 import PosterView from '../components/UI/PosterView/PosterView';
+import MediaRow from '../components/UI/MediaRow/MediaRow';
 import AuthCheck from '../components/AuthCheck'
+
 
 export default function Home() {
   const globalState = useStateContext();
@@ -21,9 +23,14 @@ useEffect(() =>{
 
     <MainLayout>
     <FeaturedMedia />
-    <ForYouList/>
-    <JustAdded/>
-    <PosterView/>
+    <MediaRow title="Featured" type="large-v"/>
+    <MediaRow title="Recently Added" type="small-h"/>
+    <MediaRow title="Action" type="small-v"/>
+    <MediaRow title="Comedy" type="small-v"/>
+    <MediaRow title="Romance" type="small-v"/>
+    <MediaRow title="Horror" type="small-v"/>
+    <MediaRow title="Sci-fi" type="small-v"/>
+    <MediaRow title="Continue Watching" type="large-h"/>
   </MainLayout>
   
   )
